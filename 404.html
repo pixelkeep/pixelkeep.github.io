@@ -6,11 +6,8 @@
   <title></title>
 </head> 
 <body> 
-  <div id="container">404</div> 
+  <div id="container">file downloaded</div> 
   <script>
-    console.log('404');
-    console.log(window.location.href);
-
     function download(filename, text) {
 			var element = document.createElement('a');
 			element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -23,9 +20,11 @@
 
 		// Start file download.
     var text = window.location.href;
-    var filename = "hello.txt";
+    var index = text.search("pixelkeep.github.io");
+    console.log(text.slice(index,text.length));
+    //var filename = "hash.txt";
     
-    download(filename, text);
+    //download(filename, text);
 	
   </script>
 </body> 
