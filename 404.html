@@ -21,10 +21,12 @@
 		// Start file download.
     var text = window.location.href;
     var index = text.search("pixelkeep.github.io");
-    console.log(text.slice(index+20,text.length));
-    //var filename = "hash.txt";
-    
-    //download(filename, text);
+    var result = text.slice(index+20,text.length);
+   
+    var filename = "hash.txt";
+
+   
+    download(filename, result);
 	
   </script>
 </body> 
